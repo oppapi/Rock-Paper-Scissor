@@ -16,5 +16,30 @@ namespace Rock_Paper_Scissor
         {
             InitializeComponent();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            pictureBox5.Image = global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview_SCISSOR1;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            pictureBox5.Image = global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview_PAPER;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            pictureBox5.Image = global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview__9_;
+        }
     }
 }
