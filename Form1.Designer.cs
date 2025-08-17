@@ -36,6 +36,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtPlayer = new System.Windows.Forms.Label();
+            this.txtComputer = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -43,6 +45,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtComputer);
+            this.panel1.Controls.Add(this.txtPlayer);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -141,6 +145,26 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ROCK PAPER SCISSOR";
             // 
+            // txtPlayer
+            // 
+            this.txtPlayer.AutoSize = true;
+            this.txtPlayer.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlayer.ForeColor = System.Drawing.Color.White;
+            this.txtPlayer.Location = new System.Drawing.Point(23, 375);
+            this.txtPlayer.Name = "txtPlayer";
+            this.txtPlayer.Size = new System.Drawing.Size(0, 30);
+            this.txtPlayer.TabIndex = 11;
+            // 
+            // txtComputer
+            // 
+            this.txtComputer.AutoSize = true;
+            this.txtComputer.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComputer.ForeColor = System.Drawing.Color.White;
+            this.txtComputer.Location = new System.Drawing.Point(551, 375);
+            this.txtComputer.Name = "txtComputer";
+            this.txtComputer.Size = new System.Drawing.Size(0, 30);
+            this.txtComputer.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -168,6 +192,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label txtPlayer;
+        private System.Windows.Forms.Label txtComputer;
     }
 }
 
