@@ -64,42 +64,36 @@ namespace Rock_Paper_Scissor
 
         private void check()
         {
-            if (pictureBox5.Image == global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview_SCISSOR1
-                && pictureBox1.Image == global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview_PAPER)
+            if (player=="rock" && computer == "paper")
             {
                 MessageBox.Show("Computer wins!");
             }
-            else if (pictureBox5.Image == global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview_SCISSOR1
-                     && pictureBox1.Image == global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview__9_)
-            {
+            else if (player == "rock" && computer == "scissor")
             {
                 MessageBox.Show("Player wins!");
             }
-            else if (pictureBox5.Image == global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview_PAPER
-                     && pictureBox1.Image == global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview_SCISSOR1)
+            else if (player == "paper" && computer == "rock")
             {
                 MessageBox.Show("Player wins!");
             }
-            else if (pictureBox5.Image == global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview_PAPER
-                     && pictureBox1.Image == global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview__9_)
+            else if (player == "paper" && computer == "scissor")
             {
                 MessageBox.Show("Computer wins!");
             }
-            else if (pictureBox5.Image == global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview__9_
-                     && pictureBox1.Image == global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview_SCISSOR1)
+            else if (player == "scissor" && computer == "rock")
             {
                 MessageBox.Show("Computer wins!");
             }
-            else if (pictureBox5.Image == global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview__9_
-                     && pictureBox1.Image == global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview_PAPER)
+            else if (player == "scissor" && computer == "paper")
             {
                 MessageBox.Show("Player wins!");
             }
             else
             {
-                
+                MessageBox.Show("It's a tie!");
             }
-
+            player = "";
+            computer = "";
         }
     }
 }
