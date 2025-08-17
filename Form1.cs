@@ -12,6 +12,8 @@ namespace Rock_Paper_Scissor
 {
     public partial class Form1 : Form
     {
+        private string player;
+        private string computer;
         public Form1()
         {
             InitializeComponent();
@@ -21,9 +23,9 @@ namespace Rock_Paper_Scissor
         {
             Random random = new Random();
             int x = random.Next(1, 3);
-            if (x == 0) { pictureBox1.Image =  global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview_SCISSOR1; }
-            else if (x == 1) { pictureBox1.Image = global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview_PAPER; }
-            else { pictureBox1.Image = global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview__9_; }
+            if (x == 0) { pictureBox1.Image =  global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview_SCISSOR1; computer = "rock"; }
+            else if (x == 1) { pictureBox1.Image = global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview_PAPER; computer = "paper"; }
+            else { pictureBox1.Image = global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview__9_; computer = "scissor"; }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -39,6 +41,7 @@ namespace Rock_Paper_Scissor
         private void button1_Click(object sender, EventArgs e)
         {
             pictureBox5.Image = global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview_SCISSOR1;//rock
+            player = "rock";
             randomResponse();
             check();
         }
@@ -46,6 +49,7 @@ namespace Rock_Paper_Scissor
         private void button2_Click(object sender, EventArgs e)
         {
             pictureBox5.Image = global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview_PAPER;//paper
+            player = "paper";
             randomResponse();
             check();
         }
@@ -53,6 +57,7 @@ namespace Rock_Paper_Scissor
         private void button3_Click(object sender, EventArgs e)
         {
             pictureBox5.Image = global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview__9_;//scissor
+            player = "scissor";
             randomResponse();
             check();
         }
@@ -66,6 +71,7 @@ namespace Rock_Paper_Scissor
             }
             else if (pictureBox5.Image == global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview_SCISSOR1
                      && pictureBox1.Image == global::Rock_Paper_Scissor.Properties.Resources.image_removebg_preview__9_)
+            {
             {
                 MessageBox.Show("Player wins!");
             }
@@ -91,7 +97,7 @@ namespace Rock_Paper_Scissor
             }
             else
             {
-                MessageBox.Show("It's a tie!");
+                
             }
 
         }
